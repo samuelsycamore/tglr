@@ -7,7 +7,6 @@ const IndexPage = (props) => (
       <li key={post.id}>
         <Link href={`/${post.slug}`}>
           <a>
-          <img src={post.feature_image} />
           {post.title}</a>
         </Link>
       </li>
