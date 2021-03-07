@@ -6,7 +6,6 @@
 /content/
 .ghost-cli
 .ghostpid
-yarn.lock
 
 # testing
 /coverage
