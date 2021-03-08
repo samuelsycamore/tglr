@@ -1,8 +1,10 @@
 import { getPosts } from '../lib/posts'
-import Link from 'next/link';
+import Layout from "../components/layout";
+import Link from 'next/link'
 
 const IndexPage = (props) => (
-  <ul>
+  <Layout home>
+      <ul>
     {props.posts.map(post => (
       <li key={post.id}>
         <Link href={`/${post.slug}`}>
@@ -12,6 +14,7 @@ const IndexPage = (props) => (
       </li>
     ))}
   </ul>
+  </Layout>
 );
 
 
