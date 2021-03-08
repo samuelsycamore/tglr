@@ -1,6 +1,7 @@
 import { getPosts } from '../lib/posts'
 import Layout from "../components/layout";
 import Link from 'next/link'
+import Date from '../components/date'
 
 const IndexPage = (props) => (
   <Layout home>
@@ -11,6 +12,8 @@ const IndexPage = (props) => (
           <a><img src={post.feature_image} />
           {post.title}</a>
         </Link>
+        <Date dateString={post.published_at} />
+
       </li>
     ))}
   </ul>

@@ -7,7 +7,7 @@ import Footer from "./Footer";
 
 export const siteTitle = "Good Life Revival";
 
-export default function Layout({ children, home, pages }) {
+export default function Layout({ children, home }) {
   return (
     <>
       <Head>
@@ -26,9 +26,14 @@ export default function Layout({ children, home, pages }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <div className="body-font antialiased text-lg text-black bg-fixed bg-gradient-to-br from-blue-100 to-blue-900">
-        <Header />
-        <SimplerNav />
+      <div className="sans antialiased tracking-wide text-lg text-black bg-gray-50">
+        
+
+            
+            <Header />
+ 
+
+            <SimplerNav />
 
         <main className="p-2">{children}</main>
 
