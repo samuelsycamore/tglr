@@ -43,6 +43,7 @@ export async function getStaticProps(context) {
   }
 
   return {
-    props: { post }
+    props: { post },
+    revalidate: 10
   }
 }
