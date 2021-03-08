@@ -18,7 +18,7 @@ function SimplerNav() {
   const mobileRef = useRef();
   useOnClickOutside(mobileRef, () => setOpen(false));
   return (
-    <div className="serif text-gray-100 fixed bottom-2 right-0 z-10">
+    <div className="sans font-thin uppercase tracking-tighter text-gray-100 fixed bottom-2 right-0 z-10">
     <div className="flex top-1 print:hidden">
       <nav className="p-3">
         <div className="hidden sm:flex justify-evenly md:items-center">
@@ -35,7 +35,7 @@ function SimplerNav() {
               {isOpen ? (
                 <ul
                   ref={mobileRef}
-                  className="flex flex-col text-center bg-blue-900 bg-opacity-90 absolute bottom-14 right-0 px-10 rounded-tl-xl"
+                  className="flex flex-col text-center bg-gray-900 bg-opacity-90 absolute bottom-14 right-0 px-10"
                   onClick={() => setOpen(false)}
                 >
                   <NavItem location="/" label="Blog" />
@@ -45,13 +45,13 @@ function SimplerNav() {
               ) : (
                 <button onClick={() => setOpen(true)} className="mx-auto">
                   <svg
-                    className="text-blue-100"
+                    className="text-blue-400"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    height="28"
-                    width="28"
+                    height="30"
+                    width="30"
                   >
                     <path
                       strokeLinecap="round"
