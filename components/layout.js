@@ -1,11 +1,11 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
-import Nav from './Nav'
-import Logo from './Logo'
-import Footer from './Footer'
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+import Header from "./Header";
+import SimplerNav from "./SimplerNav";
+import Footer from "./Footer";
 
-export const siteTitle = 'Local Landscapers'
+export const siteTitle = "Good Life Revival";
 
 export default function Layout({ children, home, pages }) {
   return (
@@ -14,7 +14,7 @@ export default function Layout({ children, home, pages }) {
         <link rel="icon" href="/favicon.svg" />
         <meta
           name="description"
-          content="Landscape contractors in Sonoma, California."
+          content="Learn how to better align your lifestyle with your local landscape."
         />
         <meta
           property="og:image"
@@ -26,28 +26,22 @@ export default function Layout({ children, home, pages }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
+      <div className="body-font antialiased text-lg text-black bg-fixed bg-gradient-to-br from-blue-100 to-blue-900">
+        <Header />
+        <SimplerNav />
 
-      <div className="body-font antialiased text-lg text-black bg-gray-300">
+        <main className="p-2">{children}</main>
 
-      <Logo />
-      <Nav />
+        {!home && (
+          <div className="p-5">
+            <Link href="/">
+              <a>← Back to home</a>
+            </Link>
+          </div>
+        )}
 
-      {children}
-      
-      
-      
-
-      {!home && (
-        <div className="p-5">
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
-
-    <Footer />
-
-    </div>
+        <Footer />
+      </div>
     </>
-  )
+  );
 }

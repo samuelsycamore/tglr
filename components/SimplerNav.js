@@ -22,7 +22,8 @@ function SimplerNav() {
         <div className="flex justify-evenly md:items-center">
 
             <ul className="flex justify-between flex-wrap">
-              <NavItem location="/blog" label="Plants" />
+              <NavItem location="/" label="Blog" />
+              <NavItem location="/shop" label="Shop" />
               <NavItem location="/about" label="About" />
             </ul>
           </div>

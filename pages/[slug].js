@@ -1,16 +1,18 @@
 // pages/posts/[slug].js
-
+import Layout from '../components/layout'
 import { getSinglePost, getPosts } from '../lib/posts';
 
 // PostPage page component
 const PostPage = (props) => {
   // Render post title and content in the page from props
   return (
+    <Layout>
     <div>
       <img src={props.post.feature_image} />
       <h1>{props.post.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: props.post.html }} />
     </div>
+    </Layout>
   )
 }
 
