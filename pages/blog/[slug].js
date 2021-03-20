@@ -10,7 +10,7 @@ const PostPage = (props) => {
     <Layout>
     <div>
       <h1 className="text-3xl sm:text-5xl tracking-tighter font-black py-4 text-center">{props.post.title}</h1>
-      <p className="text-center tracking-tighter italic text-gray-500"><Date dateString={props.post.published_at} /></p>
+      <p className="text-center italic text-gray-600 text-lg sm:text-xl second-font"><Date dateString={props.post.published_at} /></p>
       <div className="blogPost" dangerouslySetInnerHTML={{ __html: props.post.html }} />
     </div>
     </Layout>

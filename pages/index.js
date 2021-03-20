@@ -13,9 +13,13 @@ const IndexPage = (props) => (
               <h3 className="text-2xl sm:text-4xl tracking-tighter font-black pt-4 pb-6">
                 {post.title}
               </h3>
-              <img src={post.feature_image} />
-              {post.excerpt}
-              {post.reading_time}
+              <div className="py-4">
+                <img src={post.feature_image} />
+              </div>
+              <p className="text-xl">{post.excerpt}</p>
+              <p className="italic text-gray-600 text-lg sm:text-xl second-font">
+                <Date dateString={post.published_at} />
+              </p>
             </a>
           </Link>
         </li>

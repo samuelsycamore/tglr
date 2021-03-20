@@ -26,7 +26,7 @@ export default function Layout({ children, home }) {
             <h1 className="text-4xl sm:text-6xl tracking-tighter font-black my-4">
               {name}
             </h1>
-            <h3 className="text-gray-500 sm:text-2xl italic text-center">{tagLine}</h3>
+            <h3 className="second-font text-gray-500 text-xl sm:text-3xl italic text-center">{tagLine}</h3>
           </div>
         ) : (
           <div
@@ -52,7 +52,7 @@ export default function Layout({ children, home }) {
               </Link>
             </h2>
             <div className="lg:pt-2 lg:border-t lg:border-gray-400">
-            <h3 className="text-gray-500 italic">{tagLine}</h3>
+            <h3 className="second-font text-gray-500 text-xl italic">{tagLine}</h3>
             </div>
           </div>
         )}

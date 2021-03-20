@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <div className="fixed z-50 
     top-100 bottom-0 w-full 
-    lg:top-60 lg:left-4 lg:w-1/6 lg:my-28
+    lg:top-60 lg:left-4 lg:w-1/6 lg:my-32
     xl:left-10
     ">
         <div className="bg-blue-600 lg:bg-gray-100 flex justify-evenly mx-auto py-4 overflow-hidden rounded-t-lg 
