@@ -37,3 +37,7 @@ p {
 .blogPost a {
   color: #3182ce;
 }
+
+a:hover {
+  color: #3182ce;
+}
