@@ -8,7 +8,7 @@ const IndexPage = (props) => (
       <ul>
     {props.posts.map(post => (
       <li key={post.id}>
-        <Link href={`/${post.slug}`}>
+        <Link href={`/blog/${post.slug}`}>
           <a><img src={post.feature_image} />
           {post.title}</a>
         </Link>
