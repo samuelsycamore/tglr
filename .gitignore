@@ -6,6 +6,7 @@
 /content/
 .ghost-cli
 .ghostpid
+.gitignore
 
 # testing
 /coverage

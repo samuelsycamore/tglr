@@ -1,5 +1,6 @@
 // pages/posts/[slug].js
 import Layout from '../components/layout'
+import Date from '../components/date'
 import { getSinglePost, getPosts } from '../lib/posts';
 
 // PostPage page component
@@ -8,8 +9,8 @@ const PostPage = (props) => {
   return (
     <Layout>
     <div>
-      <img src={props.post.feature_image} />
-      <h1>{props.post.title}</h1>
+      <h1 className="text-3xl tracking-tighter font-black my-4 py-4 text-center">{props.post.title}</h1>
+      <p className="text-center tracking-tighter italic text-gray-500 py-4"><Date dateString={props.post.published_at} /></p>
       <div dangerouslySetInnerHTML={{ __html: props.post.html }} />
     </div>
     </Layout>
