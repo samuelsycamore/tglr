@@ -2,13 +2,13 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <div className="fixed bottom-0 z-10 w-full bg-gray-900 bg-opacity-90">
-      <div className="flex py-3 px-2">
+    <div className="fixed z-10 w-full bg-gray-100">
+      <div className="flex py-3 px-2 items-center justify-center">
         <Link href="/">
           <a>
             <h1
-              className="serif font-bold tracking-tighter
-      text-4xl lg:text-8xl text-blue-400"
+              className="serif tracking-tighter
+      text-4xl lg:text-6xl uppercase text-gray-900"
             >
               Good Life Revival
             </h1>

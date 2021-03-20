@@ -16,11 +16,11 @@ function SimplerNav() {
   const mobileRef = useRef();
   useOnClickOutside(mobileRef, () => setOpen(false));
   return (
-    <div className="sans font-thin uppercase tracking-tighter text-gray-100 fixed bottom-2 right-0 z-10">
-      <div className="flex top-1 print:hidden">
+    <div className="sans uppercase tracking-tighter text-gray-900 z-50">
+      <div className="flex print:hidden">
         <nav className="p-3">
           <div className="hidden sm:flex justify-evenly md:items-center">
-            <ul className="flex flex-col text-right flex-wrap">
+            <ul className="flex text-right flex-wrap">
               <NavItem location="/" label="Blog" />
               <NavItem location="/shop" label="Shop" />
               <NavItem location="/about" label="About" />

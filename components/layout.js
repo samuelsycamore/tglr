@@ -1,52 +1,68 @@
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
-import Header from "./Header";
-import SimplerNav from "./SimplerNav";
-import Footer from "./Footer";
+import Link from "next/link";
+import NavBar from "../components/navbar";
 
+const name = "Good Life Revival";
 export const siteTitle = "Good Life Revival";
 
 export default function Layout({ children, home }) {
   return (
-    <>
-      <Head>
-        <link rel="icon" href="/favicon.svg" />
-        <meta
-          name="description"
-          content="Learn how to better align your lifestyle with your local landscape."
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+    <div>
+      <NavBar />
 
-      <div className="sans antialiased tracking-wide text-lg text-black bg-gray-50">
-        
-
-            
-            <Header />
- 
-
-            <SimplerNav />
-
-        <main className="p-2">{children}</main>
-
+        <header>
+          {home ? (
+            <div className="flex flex-col justify-center items-center my-4">
+              <Image
+                priority
+                src="/images/berries.jpg"
+                className="rounded-full"
+                height={150}
+                width={150}
+                alt={name}
+              />
+              <h1 className="text-5xl tracking-tighter font-black my-4">
+                {name}
+              </h1>
+            </div>
+          ) : (
+            <div className="flex justify-left items-center">
+              <Link href="/">
+                <a>
+                  <Image
+                    priority
+                    src="/images/berries.jpg"
+                    className="rounded-full"
+                    height={70}
+                    width={70}
+                    alt={name}
+                  />
+                </a>
+              </Link>
+              <h2 className="text-2xl tracking-tighter font-black my-4 reset-py">
+                <Link href="/">
+                  <a>{name}</a>
+                </Link>
+              </h2>
+            </div>
+          )}
+        </header>
+        <div
+        className="container max-w-2xl  
+    flex flex-col justify-center items-center 
+    p-4 mx-auto 
+    text-xl antialiased"
+      >
+        <main>{children}</main>
         {!home && (
-          <div className="p-5">
+          <div className="mb-20">
             <Link href="/">
-              <a>← Back to home</a>
+              <a className="text-blue-500 hover:underline">← Back to home</a>
             </Link>
           </div>
         )}
-
-        <Footer />
       </div>
-    </>
+</div>
   );
 }
