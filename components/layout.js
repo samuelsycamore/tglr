@@ -11,7 +11,7 @@ export default function Layout({ children, home }) {
   return (
     <>
     <Head>
-      <title>{name}</title>
+      <title>{siteTitle}</title>
     </Head>
     <div className="bg-gray-300 text-gray-800">
       <NavBar />
