@@ -9,6 +9,10 @@ export const siteTitle = "Good Life Revival";
 
 export default function Layout({ children, home }) {
   return (
+    <>
+    <Head>
+      <title>{name}</title>
+    </Head>
     <div className="bg-gray-300 text-gray-800">
       <NavBar />
 
@@ -75,5 +79,6 @@ export default function Layout({ children, home }) {
         )}
       </div>
     </div>
+    </>
   );
 }
