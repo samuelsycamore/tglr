@@ -13,3 +13,23 @@
 .sans {
   font-family: 'Open Sans', sans-serif;
 }
+
+p {
+  padding: 10px 0;
+  line-height: 2rem;
+}
+
+.blogPost li {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding: 10px 0;
+  line-height: 2rem;
+}
+
+.blogPost img, .blogPost blockquote {
+  padding: 20px 0;
+}
+
+.blogPost a {
+  color: #3182ce;
+}

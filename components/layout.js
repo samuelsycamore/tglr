@@ -12,7 +12,7 @@ export default function Layout({ children, home }) {
     <div className="bg-gray-300 text-gray-800">
       <NavBar />
 
-      <header className="max-w-2xl mx-auto py-6 sm:py-2">
+      <header className="max-w-2xl mx-auto pt-4">
         {home ? (
           <div className="flex flex-col justify-center items-center py-4 px-8">
             <Image
@@ -30,7 +30,7 @@ export default function Layout({ children, home }) {
           </div>
         ) : (
           <div
-            className="lg:fixed z-50 w-full sm:justify-around p-5
+            className="lg:fixed z-50 w-full sm:justify-around py-5 px-2
             lg:top-5 lg:left-4 lg:w-1/6
             xl:left-10 lg:flex lg:flex-col items-center lg:justify-center text-center"
           >
@@ -51,7 +51,9 @@ export default function Layout({ children, home }) {
                 <a>{name}</a>
               </Link>
             </h2>
+            <div className="lg:pt-2 lg:border-t lg:border-gray-400">
             <h3 className="text-gray-500 italic">{tagLine}</h3>
+            </div>
           </div>
         )}
       </header>
