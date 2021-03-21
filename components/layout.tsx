@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import NavBar from "../components/navbar";
+import NavBar from "./navbar";
 
 const name = "Good Life Revival";
 const tagLine = "Align your lifestyle with your local landscape";
